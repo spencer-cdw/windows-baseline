@@ -39,7 +39,7 @@ control 'windows-011' do
   ref 'Umsetzungshinweise zum Baustein SYS.1.2.2: Windows Server 2012', url: 'https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/IT-Grundschutz-Modernisierung/UH_Windows_Server_2012.html'
   ref 'Center for Internet Security', url: 'https://www.cisecurity.org/'
   describe security_policy do
-    its('SeNetworkLogonRight') { should eq input('se_network_logon_right') }
+    its('SeNetworkLogonRight.sort') { should eq input('se_network_logon_right') }
   end
 end
 
